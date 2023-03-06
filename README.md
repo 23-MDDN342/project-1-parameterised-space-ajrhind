@@ -2,10 +2,6 @@
 ### 2023 MDDN342 Project 1: Parameterised Space
 
 
-**Week One** 
+**Week Two** 
 
-My design for ths project will water rippling. I want to use pixel art for the aesthetic for it, because I think this could work quite well with how I am imagining the final outcome. I feel that I might have a bit of difficulty with the plan I currently have, but I feel lke I can make it work and look really good.
-
-I've been trying to play around with my ripple idea, but I'm not quite sure how I'm going to make it work. I'm thinking I could slightly change my idea, and make it an optical illusion of sorts, in the same kind of view as the ripples would be. I also think it would look cool to still do a ripple, but do it from side on, and using ovals instead of plain ellipses.
-
-
+After getting my simple water ripple loop working, I'm thinking about different ways I could do it. I thought about making a for loop, with lots of ellipses with a heavy stroke, and then when there is a water drop, they will bounce up and down, and change colour. I think this could be quite difficult though, as  would need to have a delay at the start for the water drop. I also have no idea how I would make each ellipes stroke bounce up and down to make the illusion of a ripple. If I can't manage to do it, I think I might just take the drop out all together, and make it just a really smooth illusion. 
