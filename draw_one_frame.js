@@ -36,8 +36,17 @@ function draw_one_frame(cur_frac, cur_frame) {
 	fill(152, 190, 250,0)
 	strokeWeight(strip3);
 		ellipse(width/2,height/2,ripple3,ripple3/2);//big outside one
+
+
 		strokeWeight(strip2);
-		ellipse(width/2,height/2,ripple2,ripple2/2);//big one
+		stroke(255);
+		ellipse(width/2,(height/2)+10,ripple2-40,(ripple2/2)-40)
+		stroke(177, 206, 250);
+		ellipse(width/2,height/2,ripple2,ripple2/2);//inbetween one
+		
+	
+
+		stroke(177, 206, 250);
 		strokeWeight(strip1);
 		ellipse(width/2,height/2,ripple,ripple/2);//middle small one
 
@@ -67,8 +76,8 @@ function draw_one_frame(cur_frac, cur_frame) {
 
 	//second iteration----------------------------------------------------------
 // fill(0,0,0,0);
-	// stroke(104, 146, 212);
-	// for(let i=0;i<4;i++){//makes one big one spreading outfully
-	// 	ellipse(width/2,height/2,ripple*i,ripple*i/2)
-	// }
+// 	stroke(104, 146, 212);
+// 	for(let i=0;i<4;i++){//makes one big one spreading outfully
+// 		ellipse(width/2,height/2,ripple*i,ripple*i/2)
+// 	}
 }	
