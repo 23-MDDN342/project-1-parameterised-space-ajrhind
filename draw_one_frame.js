@@ -8,23 +8,31 @@ function draw_one_frame(cur_frac, cur_frame) {
 	//setup-------------------------------
 	background(134, 177, 247);
 	strokeWeight(60);
-	//maps-------------------------------
+	//-----------------------------------
 	let ripple=map(cur_frac,0,1,0,width/2);
 	let ripple2=map(cur_frac,0,1,width/2,width);
-	let ripple3=map(cur_frac,0,1,width,width*1.5);
+	let ripple3=map(cur_frac,0,1,width,width*1.6);
 
 	let strip1=map(cur_frac,0,1,0,10);
 	let strip2=map(cur_frac,0,1,11,30);
 	let strip3=map(cur_frac,0,1,31,60);
+
+
+	let HL=color(177, 206, 250);//165, 217, 250 , ,#DAE4F5
+	let LL=color(52, 190, 250);//115, 198, 250, , #92BCFF
+//mid light  #B7D1FA
+
+	// let wadda=lerpColor(LL,HL,cur_fra);
 	//work-------------------------------
 
 		
 	//first iteration----------------------------------------------------------
 
-	//big stroke
-	
-	// strokeWeight(60);
-	stroke(152, 190, 250);
+
+
+		//big stroke
+	// stroke(wadda);
+	stroke(177, 206, 250);
 	fill(152, 190, 250,0)
 	strokeWeight(strip3);
 		ellipse(width/2,height/2,ripple3,ripple3/2);//big outside one
@@ -33,11 +41,20 @@ function draw_one_frame(cur_frac, cur_frame) {
 		strokeWeight(strip1);
 		ellipse(width/2,height/2,ripple,ripple/2);//middle small one
 
-	//midlight stroke
+
+
+
+
+
+
+	// //midlight stroke
 	// stroke(161, 194, 247);
-	// fill(152, 190, 250,0)
+	// // fill(152, 190, 250,0)
+	// strokeWeight(strip3);
 	// 	ellipse(width/2,height/2,ripple3,ripple3/2);//big outside one
+	// 	strokeWeight(strip2);
 	// 	ellipse(width/2,height/2,ripple2,ripple2/2);//big one
+	// 	strokeWeight(strip1);
 	// 	ellipse(width/2,height/2,ripple,ripple/2);//middle small one
 
 	// // //highlight stroke
