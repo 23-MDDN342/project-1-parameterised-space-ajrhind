@@ -7,32 +7,32 @@ function draw_one_frame(cur_frac, cur_frame) {
 	let halfY = height/2;
 	let ESX = 400;
 	let ESY = ESX/2;
-	background(134, 177, 247);
+	background(144, 224, 239);
 	strokeWeight(60);
-	//-----------------------------------
+	//========================================================
+	let shadow=map(cur_frac,0,1,halfX/2,halfX*1.5);
+	let shadow1=map(cur_frac,0,1,halfX*1.5,halfX*3);
+	let shadow2=map(cur_frac,0,1,halfX*2,halfX*6);
+
 	let ripple=map(cur_frac,0,1,0,halfX);
 	let ripple2=map(cur_frac,0,1,halfX,width);
 	let ripple3=map(cur_frac,0,1,width,width*1.7);
 
+	let IW=map(cur_frac,0,1,halfY/1000,halfY/100);
+	let MW=map(cur_frac,0,1,halfY/100,halfY/50);
+	let BW=map(cur_frac,0,1,halfY/50,halfY/25);
 	let strip1=map(cur_frac,0,1,halfY/500,halfY/25);
 	let strip2=map(cur_frac,0,1,halfY/25,halfY/10);
 	let strip3=map(cur_frac,0,1,halfY/10,halfY/5);
 
-
-
 	let HL=color(255)//(177, 206, 250);165, 217, 250 , ,#DAE4F5
 	let LL=color(0);//(52, 190, 250);//115, 198, 250, , #92BCFF
-	let mao=color(155,198,250);
 //mid light  #B7D1FA
 
 	let wadda=lerpColor(LL,HL,cur_frac);
-	
-	//work-------------------------------
+	//========================================================
 
-		
-	//first iteration----------------------------------------------------------
-
-		//big stroke
+		//	RIPPLE____________________________________________
 	let smaller = height/ 10
 	let smallerRipple = ripple-smaller;
 		if(ripple-smaller < 0){
@@ -47,42 +47,66 @@ function draw_one_frame(cur_frac, cur_frame) {
 			bigSrip=0;
 		}
 
+	fill(0,0,0,0)
 
-
-	fill(0,0)
-
-strokeWeight(strip3);//outside
+strokeWeight(strip3);//outside.................................
 push();
 	translate(-25,-12.5);
 	scale(1.05);
-	stroke(177, 206, 250);
-	ellipse(halfX,halfY,bigSrip,bigSrip/2);//big outside one
+	stroke(173, 232, 244);
+	ellipse(halfX,halfY,bigSrip,bigSrip/2);//BACKLIGHT
 pop();
-	stroke(255);
-	ellipse(halfX,halfY,bigSrip,bigSrip/2);
+	stroke(202, 240, 248);
+	ellipse(halfX,halfY,bigSrip,bigSrip/2);//HIGHLIGHT
 
-
-strokeWeight(strip2);//middle
+strokeWeight(strip2);//middle.................................
 push();
 	translate(-25,-12.5);
 	scale(1.05);
-	stroke(177, 206, 250);
+	stroke(173, 232, 244);
 	ellipse(halfX,halfY,medSrip,medSrip/2);//middle behind(BACKLIGHT)
 pop();
-stroke(255); 
+stroke(202, 240, 248); 
 	ellipse(halfX,halfY,medSrip,medSrip/2)
-	
-strokeWeight(strip1);//inside
+
+stroke(0);
+	ellipse(halfX,halfY,shadow1,shadow1/2);
+
+strokeWeight(strip1);//inside.......................................
 push();
 	translate(-25,-12.5);
 	scale(1.05);
-	stroke(177, 206, 250);
+	stroke(173, 232, 244);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//ripple,ripple/2//inside behind(BACKLIGHT)
 pop();
-stroke(255);
+stroke(202, 240, 248);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//inside front(HIGHLIGHT)
 
-	// second iteration----------------------------------------------------------
+stroke(0);
+	ellipse(halfX,halfY,shadow,shadow/2);//shadow
+
+//white highlight.................................................
+	stroke(255);
+strokeWeight(IW);
+ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//inside front(HIGHLIGHT)
+strokeWeight(MW);
+ellipse(halfX,halfY,medSrip,medSrip/2)
+strokeWeight(BW);
+ellipse(halfX,halfY,bigSrip,bigSrip/2);
+
+
+			//WATERDROP____________________________________________
+
+
+
+
+
+
+
+
+	//========================================================
+
+	// second iteration------------------------------------------------------------------------
 // fill(0,0,0,0);
 // strokeWeight(2);
 	// stroke(104, 146, 212);

@@ -2,8 +2,12 @@
 ### 2023 MDDN342 Project 1: Parameterised Space
 
 
-**Week Two** 
+**Week Three** 
 
-After getting my simple water ripple loop working, I'm thinking about different ways I could do it. I thought about making a for loop, with lots of ellipses with a heavy stroke, and then when there is a water drop, they will bounce up and down, and change colour. I think this could be quite difficult though, as  would need to have a delay at the start for the water drop. I also have no idea how I would make each ellipes stroke bounce up and down to make the illusion of a ripple. If I can't manage to do it, I think I might just take the drop out all together, and make it just a really smooth illusion. 
+Last week I was tryinhg to get a for loop working for the ripple. I got it kind of working, but the postioning seemed wrong, and I couldn't figure out the logic needed for it to be able to do what I want. So I've gone back to my original bunch of ellipses. 
 
-For this second class I'm trying to work with a for loop before I commit to using the other method. I think in the long run the for loop will be much easier, but figuring it out right now is the issue. 
+This week I'm going to try make it more 3d, and put more realism into it. I'm gonna add in some more shadows and highlights, and then get the water drop in there. I dont think that will be a difficult task, so I'm leaving it for last.
+
+
+*ALS NOTES FOR THE NEXT CLASS*
+Make sure to make the inside shadow ellipse, i thinu need to just half the first shadow map. Then u need to make the stroke rlly thick and make it a darker blue than the background. Could do this a few times w slight changews to the colour but who knows yet. You also need to do the water drop this class so its in the right position and you can get phoebe to help.
