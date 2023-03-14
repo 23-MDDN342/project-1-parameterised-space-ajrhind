@@ -11,8 +11,7 @@ function draw_one_frame(cur_frac, cur_frame) {
 	strokeWeight(60);
 	//========================================================
 	let shadow=map(cur_frac,0,1,halfX/2,halfX*1.5);
-	let shadow1=map(cur_frac,0,1,halfX*1.5,halfX*3);
-	let shadow2=map(cur_frac,0,1,halfX*2,halfX*6);
+	let shadow1=map(cur_frac,0,1,halfX*1.5,halfX*2.8);
 
 	let ripple=map(cur_frac,0,1,0,halfX);
 	let ripple2=map(cur_frac,0,1,halfX,width);
@@ -21,8 +20,8 @@ function draw_one_frame(cur_frac, cur_frame) {
 	let IW=map(cur_frac,0,1,halfY/1000,halfY/100);
 	let MW=map(cur_frac,0,1,halfY/100,halfY/50);
 	let BW=map(cur_frac,0,1,halfY/50,halfY/25);
-	let strip1=map(cur_frac,0,1,halfY/500,halfY/25);
-	let strip2=map(cur_frac,0,1,halfY/25,halfY/10);
+	let strip1=map(cur_frac,0,1,halfY/500,halfY/20);
+	let strip2=map(cur_frac,0,1,halfY/20,halfY/10);
 	let strip3=map(cur_frac,0,1,halfY/10,halfY/5);
 
 	let HL=color(255)//(177, 206, 250);165, 217, 250 , ,#DAE4F5
@@ -30,7 +29,7 @@ function draw_one_frame(cur_frac, cur_frame) {
 //mid light  #B7D1FA
 
 	let wadda=lerpColor(LL,HL,cur_frac);
-	//========================================================
+	//=========================================================================
 
 		//	RIPPLE____________________________________________
 	let smaller = height/ 10
@@ -69,8 +68,9 @@ pop();
 stroke(202, 240, 248); 
 	ellipse(halfX,halfY,medSrip,medSrip/2)
 
-stroke(0);
-	ellipse(halfX,halfY,shadow1,shadow1/2);
+strokeWeight(strip3*2);
+stroke(135, 217, 232);
+	ellipse(halfX,halfY,shadow1,shadow1/2);//shaodw
 
 strokeWeight(strip1);//inside.......................................
 push();
@@ -82,7 +82,8 @@ pop();
 stroke(202, 240, 248);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//inside front(HIGHLIGHT)
 
-stroke(0);
+	strokeWeight(strip1*4);
+stroke(135, 217, 232);
 	ellipse(halfX,halfY,shadow,shadow/2);//shadow
 
 //white highlight.................................................
@@ -96,15 +97,32 @@ ellipse(halfX,halfY,bigSrip,bigSrip/2);
 
 
 			//WATERDROP____________________________________________
+			let tbvr =map(cur_frac,0,1,height-height*1.6,halfY*1.05);
+			let rainSize=map(cur_frac,0,1,100,150);
+
+			// scale(rainSize);
+			translate(halfX-halfX,tbvr-halfY);
+			DrawRaindrop(0,0);
+
+	//=========================================================================
+	}
+	
+	function DrawRaindrop (){
+		strokeWeight(4);
+		fill(255);
+		let halfX = width/2;
+	let halfY = height/2;
+		let triSize=halfX/40;
+	
+
+		
+		ellipse(halfX,halfY,halfX/20,halfX/15);
+		triangle(halfX,halfY-triSize*3,halfX-triSize,halfY,halfX+triSize,halfY);
+	
+	
 
 
-
-
-
-
-
-
-	//========================================================
+	}
 
 	// second iteration------------------------------------------------------------------------
 // fill(0,0,0,0);
@@ -134,4 +152,3 @@ ellipse(halfX,halfY,bigSrip,bigSrip/2);
 	// 	// stroke(250,155,155);//ornge
 	// 	ellipse(halfX,halfY,(ESX/1.4)*i,(ESY/1.4)*i);
 	// 	}
-	}
