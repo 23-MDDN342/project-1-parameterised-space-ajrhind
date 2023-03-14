@@ -1,13 +1,15 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10300716&assignment_repo_type=AssignmentRepo)
 ### 2023 MDDN342 Project 1: Parameterised Space
-EXAMPLE README 
 
-My design is inspired by fireworks and flowers. I want it to be full of changes, so that every frame can have a fresh feeling.
 
-In terms of concrete performance, I draw different geometric figures, let them spread out, and overlay their number at the same time, through the time difference to make the whole dynamic background become enthusiastic.
+**Week Three** 
 
-In terms of color, I made different shapes correspond to different colors, and changed the parameters so that they were different every time they appeared, so that there would be differences between different loops.
+Last week I was tryinhg to get a for loop working for the ripple. I got it kind of working, but the postioning seemed wrong, and I couldn't figure out the logic needed for it to be able to do what I want. So I've gone back to my original bunch of ellipses. 
 
-In the initial design, I only added the circle. Through the color change of the circle and the superposition of the movement track, although it has a good effect, I think it is too monotonous.
+This week I'm going to try make it more 3d, and put more realism into it. I'm gonna add in some more shadows and highlights, and then get the water drop in there. I dont think that will be a difficult task, so I'm leaving it for last.
 
-In the later stages, I added a lot of geometric shapes, which made the color and pattern more variable.
+
+*ALS NOTES FOR THE NEXT CLASS*
+Make sure to make the inside shadow ellipse, i think need to just half the first shadow map. Then u need to make the stroke rlly thick and make it a darker blue than the background. Could do this a few times w slight changews to the colour but who knows yet. You also need to do the water drop this class so its in the right position and you can get phoebe to help.
+
+also need ot fix the different sizes scale cos thts not working properly
