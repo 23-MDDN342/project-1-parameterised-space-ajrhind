@@ -104,6 +104,8 @@ ellipse(halfX,halfY,bigSrip,bigSrip/2);
 			translate(halfX-halfX,tbvr-halfY);
 			DrawRaindrop(0,0);
 
+			// if(DrawRaindrop){}//could try to make it flat at the end and do the jumpy thing that it would normally do
+
 	//=========================================================================
 	}
 	

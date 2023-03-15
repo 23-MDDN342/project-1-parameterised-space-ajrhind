@@ -10,6 +10,6 @@ This week I'm going to try make it more 3d, and put more realism into it. I'm go
 
 
 *ALS NOTES FOR THE NEXT CLASS*
-Make sure to make the inside shadow ellipse, i think need to just half the first shadow map. Then u need to make the stroke rlly thick and make it a darker blue than the background. Could do this a few times w slight changews to the colour but who knows yet. You also need to do the water drop this class so its in the right position and you can get phoebe to help.
+I don't think u need to do the inside shadow part, could try, i dont know if it would look natural or not. I also need to make the shadows and highlights pop more, cos rn it looks very flat. Fix the raindrop too, looks jank rn. 
 
 also need ot fix the different sizes scale cos thts not working properly
