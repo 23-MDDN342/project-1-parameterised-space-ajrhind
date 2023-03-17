@@ -28,7 +28,6 @@ function draw_one_frame(cur_frac) {
 	let LL=color(0);//(52, 190, 250);//115, 198, 250, , #92BCFF
 //mid light  #B7D1FA
 
-	let wadda=lerpColor(LL,HL,cur_frac);
 	//=========================================================================
 
 		//	RIPPLE____________________________________________
@@ -51,60 +50,53 @@ function draw_one_frame(cur_frac) {
 		//SHADOWS AND DEPTH.......................................
 strokeWeight(strip1*6);//inside
 	stroke(135, 217, 232);
-		ellipse(halfX,halfY,shadow,shadow/2);//shadow
-		strokeWeight(strip1*3);
-		stroke(122, 200, 214);
-		ellipse(halfX,halfY,shadow,shadow/2);//depth
-		
-		strokeWeight(strip3*6);
-		stroke(135, 217, 232);
-		ellipse(halfX,halfY,ShadEnd1,ShadEnd1/2)//lighter loop end
-		
+	ellipse(halfX,halfY,shadow,shadow/2);//shadow
+	strokeWeight(strip1*3);
+	stroke(126, 207, 222);
 
-		strokeWeight(strip3*3);
-		stroke(122, 200, 214);
+	ellipse(halfX,halfY,shadow,shadow/2);//depth
+	
+	strokeWeight(strip3*6);
+	stroke(135, 217, 232);
+	ellipse(halfX,halfY,ShadEnd1,ShadEnd1/2)//lighter loop end
+	
 
-		ellipse(halfX,halfY,ShadEnd1,ShadEnd1/2)//loop end DARKER
-		stroke(135, 217, 232);
-		ellipse(halfX,halfY,shadow1,shadow1/2);//shaodw
-		
+	strokeWeight(strip3*3);
+	stroke(126, 207, 222);
+	ellipse(halfX,halfY,ShadEnd1,ShadEnd1/2)//loop end DARKER
+	stroke(135, 217, 232);
+	ellipse(halfX,halfY,shadow1,shadow1/2);//shaodw
+	
 
-		strokeWeight(strip3*1.5);
-		stroke(122, 200, 214);
-		ellipse(halfX,halfY,shadow1,shadow1/2);//depth DARKER
+	strokeWeight(strip3*1.5);
+	stroke(126, 207, 222);
+	ellipse(halfX,halfY,shadow1,shadow1/2);//depth DARKER
+	
 		
 		
-		
-		strokeWeight(strip3);//outside.................................
-		push();
-	translate(-25,-12.5);
-	scale(1.05);
-	stroke(173, 232, 244);
+	strokeWeight(strip3*2);//outside.................................
+	stroke(163, 226, 240);
 	ellipse(halfX,halfY,bigSrip,bigSrip/2);//BACKLIGHT
-pop();
-	stroke(202, 240, 248);
+	strokeWeight(strip3);//outside.................................
+	stroke(194, 242, 252);
 	ellipse(halfX,halfY,bigSrip,bigSrip/2);//HIGHLIGHT
 
-strokeWeight(strip2);//middle.................................
-push();
-	translate(-25,-12.5);
-	scale(1.05);
-	stroke(173, 232, 244);
+	strokeWeight(strip2*2);//middle.................................
+	stroke(163, 226, 240);
 	ellipse(halfX,halfY,medSrip,medSrip/2);//middle behind(BACKLIGHT)
-pop();
-stroke(202, 240, 248); 
+
+// stroke(202, 240, 248); 
+strokeWeight(strip2);//middle.................................
+
+stroke(185, 239, 250);
 	ellipse(halfX,halfY,medSrip,medSrip/2)
 
-strokeWeight(strip1);//inside.......................................
-push();
-	translate(-25,-12.5);
-	scale(1.05);
-	stroke(173, 232, 244);
+strokeWeight(strip1*2);//inside.......................................
+	stroke(163, 226, 240);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//ripple,ripple/2//inside behind(BACKLIGHT)
-pop();
-// stroke(202, 240, 248);
-stroke(186, 235, 245);
 
+	strokeWeight(strip1);//inside.......................................
+	stroke(186, 235, 245);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2);//inside front(HIGHLIGHT)
 
 //white highlight.................................................
@@ -121,32 +113,18 @@ ellipse(halfX,halfY,bigSrip,bigSrip/2);
 			
 			let rainSize=map(cur_frac,0,1,halfX/10,halfX/150);
 			
-			// translate(halfX-halfX,tbvr-halfY);	
-			// DrawRaindrop(0,0);
-			let triSize=halfX/40;
 			strokeWeight(4);
+			stroke(186, 235, 245);
 			fill(222, 245, 250);
+			ellipse(halfX,tbvr,rainSize,rainSize*2);
 
-			push();
-				ellipse(halfX,tbvr,rainSize,rainSize*2);
-				// triangle(halfX,tbvr-triSize*4,halfX-triSize,tbvr,halfX+triSize,tbvr);
-			pop();
-			
+			fill(255)
+			stroke(186, 235, 245);
+			strokeWeight(1);
+			ellipse(halfX,tbvr,rainSize/1.5,(rainSize*2)/1.5);
+	
 			//=========================================================================
 		}
 		
-		function DrawRaindrop (cur_frac){
-			strokeWeight(4);
-			fill(222, 245, 250);
-			let halfX = width/2;
-			let halfY = height/2;
-			let triSize=halfX/40;
-			
 
-
-	push();
-		ellipse(halfX,halfY,halfX/20,halfX/15);
-		triangle(halfX,halfY-triSize*3,halfX-triSize,halfY,halfX+triSize,halfY);
-		pop();
-	}
 
