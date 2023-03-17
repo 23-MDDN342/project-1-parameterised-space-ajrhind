@@ -4,12 +4,6 @@
 
 **Week Three** 
 
-Last week I was tryinhg to get a for loop working for the ripple. I got it kind of working, but the postioning seemed wrong, and I couldn't figure out the logic needed for it to be able to do what I want. So I've gone back to my original bunch of ellipses. 
+After lots of struggle, I managed to get my raindrop looking somewhat normal. After crit, Phoebe had said that the way it was drawing was uncanny, because the perspective s from the side, but the raindrop was staying the same size, so it looked odd. It was always in my plan to scale it, making it smaller to thhe bottom, because it did look weird without it. I also want to see about adding a shadow for the water drop in behind the actual drop, although I'm not sure how I will manage that.
 
-This week I'm going to try make it more 3d, and put more realism into it. I'm gonna add in some more shadows and highlights, and then get the water drop in there. I dont think that will be a difficult task, so I'm leaving it for last.
-
-
-*ALS NOTES FOR THE NEXT CLASS*
-I don't think u need to do the inside shadow part, could try, i dont know if it would look natural or not. I also need to make the shadows and highlights pop more, cos rn it looks very flat. Fix the raindrop too, looks jank rn. 
-
-also need ot fix the different sizes scale cos thts not working properly
+I've also played around a bit with the colour palette, and make it a bit more ple and quiet, because I felt that the shadows and highlights were a bit too harsh on one another. I still might try to mess around with the colours a bit more, because4 I want it to be convincing. I do know that there is a point where I will have to stop though, because I will overdo it if given the chance.
