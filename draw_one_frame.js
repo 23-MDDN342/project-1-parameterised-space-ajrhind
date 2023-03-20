@@ -25,6 +25,11 @@ function draw_one_frame(cur_frac) {
 	let strip3=map(cur_frac,0,1,halfY/10,halfY/5);
 
 	//Colours.........................
+
+	let depthM1 = map(cur_frac,0,1,255,100);
+	let depthM2 = map(cur_frac,0,1,100,50);//make a new set fo things for the things w transparency for the top of the ripple idk its recorded.
+	let depthM3 = map(cur_frac,0,1,50,0);
+
 	let backShadow=color(126, 207, 222);//darkest
 	let frontShadow=color(135, 217, 232);//lighter
 	let highL3=color(158, 231, 247);
@@ -32,9 +37,10 @@ function draw_one_frame(cur_frac) {
 	let highL1=color(222, 245, 250);//lightest
 	let rainColor=color(186, 235, 245);
 
+
 	//=============================================
 
-//	RIPPLE_________________________________________________________________
+//	RIPPLE__________________________________________________________________
 	let smaller = height/ 10
 	let smallerRipple = ripple-smaller;
 		if(ripple-smaller < 0){
@@ -57,11 +63,11 @@ function draw_one_frame(cur_frac) {
 	stroke(frontShadow);
 	arc(halfX,halfY,shadow,shadow/2.2,190,360);
 
-	strokeWeight(strip1*2);//middle
+	strokeWeight(strip1*2);//insdie
 	stroke(backShadow);
 	arc(halfX,halfY,shadow,shadow/2.2,200,350);
 	
-	strokeWeight(strip3*1.5);
+	strokeWeight(strip3*1.5);//middle
 	stroke(frontShadow);
 	arc(halfX,halfY,shadow1,shadow1/2.2,190,360);
 
