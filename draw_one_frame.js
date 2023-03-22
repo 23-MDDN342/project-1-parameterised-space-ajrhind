@@ -30,8 +30,13 @@ function draw_one_frame(cur_frac) {
 	let depthM2 = map(cur_frac,0,1,100,50);//make a new set fo things for the things w transparency for the top of the ripple idk its recorded.
 	let depthM3 = map(cur_frac,0,1,50,0);
 
-	let backShadow=color(126, 207, 222);//darkest
-	let frontShadow=color(135, 217, 232);//lighter
+	let backShadow1=color(126, 207, 222,depthM1);//darkest
+	let backShadow2=color(126,207,222,depthM2);
+	let backShadow3=color(126,207,222,depthM3);
+	let frontShadow1=color(135, 217, 232,depthM1);//lighter
+	let frontShadow2=color(135, 217, 232,depthM2);//lighter
+	let frontShadow3=color(135, 217, 232,depthM3);//lighter
+
 	let highL3=color(158, 231, 247);
 	let highL2=color(194,242,252);
 	let highL1=color(222, 245, 250);//lightest
@@ -60,117 +65,107 @@ function draw_one_frame(cur_frac) {
 //SHADOWS AND DEPTH.......................................
 
 	strokeWeight(strip1*3);//inside
-	stroke(frontShadow);
+	stroke(frontShadow1);
 	arc(halfX,halfY,shadow,shadow/2.2,190,360);
 
 	strokeWeight(strip1*2);//insdie
-	stroke(backShadow);
+	stroke(backShadow1);
 	arc(halfX,halfY,shadow,shadow/2.2,200,350);
 	
 	strokeWeight(strip3*1.5);//middle
-	stroke(frontShadow);
+	stroke(frontShadow2);
 	arc(halfX,halfY,shadow1,shadow1/2.2,190,360);
 
 	strokeWeight(strip2*2);//middle
-	stroke(backShadow);
+	stroke(backShadow2);
 	arc(halfX,halfY,shadow1,shadow1/2.2,200,350);
 
 	strokeWeight(strip3*3);//outer
-	stroke(frontShadow);
+	stroke(frontShadow3);
 	arc(halfX,halfY,ShadEnd1,ShadEnd1/2.2,180,360);
 	
 	strokeWeight(strip3*2);//outer
-	stroke(backShadow);
+	stroke(backShadow3);
 	arc(halfX,halfY,ShadEnd1,ShadEnd1/2.2,190,350);
 	
 
 	//underneaf
 	strokeWeight(strip1*2);
-	stroke(frontShadow);
+	stroke(frontShadow1);
 	arc(halfX,halfY+halfY/15,smallerRipple,smallerRipple/2.2,30,170);
 	strokeWeight(strip1*1.5);
-	stroke(backShadow);
+	stroke(backShadow1);
 	arc(halfX,halfY+halfY/15,smallerRipple,smallerRipple/2.2,40,160);
 
 	strokeWeight(strip2*2);//middle
-	stroke(frontShadow);
+	stroke(frontShadow2);
 	arc(halfX,halfY+halfY/15,medSrip,medSrip/2.2,30,170);
 	strokeWeight(strip2*1.5);//middle
-	stroke(backShadow);
+	stroke(backShadow2);
 	arc(halfX,halfY+halfY/15,medSrip,medSrip/2.2,40,160);
 
 	strokeWeight(strip3*2);//outer
-	stroke(frontShadow);
+	stroke(frontShadow3);
 	arc(halfX,halfY+halfY/15,bigSrip,bigSrip/2.2,30,170);
 	strokeWeight(strip3*1.5);//outer
-	stroke(backShadow);
+	stroke(backShadow3);
 	arc(halfX,halfY+halfY/15,bigSrip,bigSrip/2.2,40,160);
 
 	
 //HIGHLIGHTED.......................................
-	//outside
+	//outside.............
 	strokeWeight(strip3*2);
 	stroke(highL3);
 	ellipse(halfX,halfY,bigSrip,bigSrip/2.2);//backlight
 
 	strokeWeight(strip3);
 	stroke(highL2);
-	arc(halfX,halfY,bigSrip,bigSrip/2.2,10,180);
+	arc(halfX,halfY,bigSrip,bigSrip/2.2,350,180);
 
 	strokeWeight(strip3/2);//highlight
 	stroke(highL1);
-	arc(halfX,halfY,bigSrip,bigSrip/2.2,20,170);
+	arc(halfX,halfY,bigSrip,bigSrip/2.2,10,170);
 
 	strokeWeight(BW);
 	stroke(255);
-	arc(halfX,halfY,bigSrip,bigSrip/2.2,50,160);//whitelight
+	arc(halfX,halfY,bigSrip,bigSrip/2.2,40,160);//whitelight
 	
-	//middle
+	//middle...........
 	strokeWeight(strip2*2);
 	stroke(highL3);
 	ellipse(halfX,halfY,medSrip,medSrip/2.2);//backlight
 
 	strokeWeight(strip2);
 	stroke(highL2);
-	arc(halfX,halfY,medSrip,medSrip/2.2,10,180);
+	arc(halfX,halfY,medSrip,medSrip/2.2,350,180);
 
 	strokeWeight(strip2/2);
 	stroke(highL1);
-	arc(halfX,halfY,medSrip,medSrip/2.2,20,170);//highlight
+	arc(halfX,halfY,medSrip,medSrip/2.2,10,170);//highlight
 
 	strokeWeight(MW);
 	stroke(255);
-	arc(halfX,halfY,medSrip,medSrip/2.2,50,160);//whitelight
+	arc(halfX,halfY,medSrip,medSrip/2.2,40,160);//whitelight
+	// stroke(0,255,0);
+	// arc(halfX,halfY,medSrip,medSrip/2.2,10,20);//whitelight
 
-	//inside
+
+	//inside.........
 	strokeWeight(strip1*2);
 	stroke(highL3);
 	ellipse(halfX,halfY,smallerRipple,smallerRipple/2.2);//backlight
 
 	strokeWeight(strip1);
 	stroke(highL2);
-	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,10,180);
+	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,350,180);
 
 	strokeWeight(strip1/2);
 	stroke(highL1);
-	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,20,170);//highlight
+	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,10,170);//highlight
 
 	strokeWeight(IW);
 	stroke(255);
-	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,50,160);//whitelight
-
-
-
-//WHITE STROKE.......................................
-	stroke(highL1);
-	strokeWeight(IW);//inside 
-	// ellipse(halfX,halfY,smallerRipple,smallerRipple/2.2);
-	strokeWeight(MW);//middle
-	// ellipse(halfX,halfY,medSrip,medSrip/2.2)
-	strokeWeight(BW);//biggest
-	// ellipse(halfX,halfY,bigSrip,bigSrip/2.2);
-
-
+	arc(halfX,halfY,smallerRipple,smallerRipple/2.2,40,160);//whitelight
 
 //WATERDROP____________________________________________
 	let tbvr =map(cur_frac,0,1,height-height*2,halfY*1.1);
@@ -187,8 +182,6 @@ function draw_one_frame(cur_frac) {
 
 	strokeWeight(1);
 	ellipse(halfX,tbvr,rainSize/1.5,(rainSize*2)/1.5);
-
-
 
 	//=========================================================================
 }
