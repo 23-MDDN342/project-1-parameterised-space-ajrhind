@@ -44,7 +44,6 @@ function draw_one_frame(cur_frac) {
 
 
 	//=============================================
-
 //	RIPPLE__________________________________________________________________
 	let smaller = height/ 10
 	let smallerRipple = ripple-smaller;
@@ -186,5 +185,7 @@ function draw_one_frame(cur_frac) {
 	//=========================================================================
 }
 		
+
+
 
 

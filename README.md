@@ -2,10 +2,13 @@
 ### 2023 MDDN342 Project 1: Parameterised Space
 
 
-**Week Three** 
+#### Creative Coding III/MDDN342
+## Final ReadMe
+#### Alanah Rhind
+#### Project One - Parameterised Space
 
-After lots of struggle, I managed to get my raindrop looking somewhat normal. After crit, Phoebe had said that the way it was drawing was uncanny, because the perspective s from the side, but the raindrop was staying the same size, so it looked odd. It was always in my plan to scale it, making it smaller to thhe bottom, because it did look weird without it. I also want to see about adding a shadow for the water drop in behind the actual drop, although I'm not sure how I will manage that.
+This is my final outcome of my Creative Coding class. 
 
-I've also played around a bit with the colour palette, and make it a bit more ple and quiet, because I felt that the shadows and highlights were a bit too harsh on one another. I still might try to mess around with the colours a bit more, because4 I want it to be convincing. I do know that there is a point where I will have to stop though, because I will overdo it if given the chance.
+The brief stated we need to create an ambient repeating background for a Zoom meeting using P5.js. My first thought was to make something soothing and easy to look at. It also had to loop without a seam, so I landed on the idea of a water drop and ripple. It's a natural repeating pattern, so I came to conclusion it would be a good one to do, and it would match the brief perfectly.
 
-While I'm tidying up my code, I'm noticing that the ripple still seems off. I think I could fix this by slightly offsetting the shadows, and making it look a bit more like an actual ripple. All I will have to do is move the shadow ellipses down by a bit, and it should fix it.
+I made this ripple effect using arcs, strokeWeight, and a good colour palette. I used around 7 different colours for the palette, trying to make it look as smooth and blended as I could. Using the arcs made it so I could make a more convincing highlights and lowlights. I also put the strokeWeight into maps and made it scale with the position or the arcs, making it larger when moving out, and added some depth to the code.
